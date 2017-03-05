@@ -69,7 +69,6 @@
     <Content Include="packages.config" />
     <Content Include="BlobTriggerCSharp\function.json" />
     <Content Include="BlobTriggerCSharp\project.json" />
-    <Content Include="BlobTriggerCSharp\project.lock.json" />
     <Content Include="BlobTriggerCSharp\readme.md" />
     <Content Include="BlobTriggerCSharp\run.csx" />
     <Content Include="BlobTriggerCSharp\sample.dat" />
@@ -78,7 +77,6 @@
     <Content Include="HttpTriggerExecutionContextPrecompiled\sample.dat" />
     <Content Include="HttpTriggerExecutionContext\function.json" />
     <Content Include="HttpTriggerExecutionContext\project.json" />
-    <Content Include="HttpTriggerExecutionContext\project.lock.json" />
     <Content Include="HttpTriggerExecutionContext\readme.md" />
     <Content Include="HttpTriggerExecutionContext\run.csx" />
     <Content Include="HttpTriggerExecutionContext\sample.dat" />

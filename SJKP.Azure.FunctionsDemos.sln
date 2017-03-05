@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SJKP.Azure.FunctionDeploy",
 		{AEAEF263-FBED-47B2-9C00-18C3C3C038D0} = {AEAEF263-FBED-47B2-9C00-18C3C3C038D0}
 	EndProjectSection
 EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "Function.ResourceGroup", "Function.ResourceGroup\Function.ResourceGroup.deployproj", "{FD9360BC-D571-4751-9E43-44D37B5B5C0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{64E1BAB3-19B6-4897-844B-5338BB995026}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E1BAB3-19B6-4897-844B-5338BB995026}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E1BAB3-19B6-4897-844B-5338BB995026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9360BC-D571-4751-9E43-44D37B5B5C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9360BC-D571-4751-9E43-44D37B5B5C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9360BC-D571-4751-9E43-44D37B5B5C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9360BC-D571-4751-9E43-44D37B5B5C0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
