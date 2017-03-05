@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Common.dll" />
     <Content Include="packages.config" />
     <Content Include="BlobTriggerCSharp\function.json" />
     <Content Include="BlobTriggerCSharp\project.json" />
