@@ -97,9 +97,15 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{aeaef263-fbed-47b2-9c00-18c3c3c038d0}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)SJKP.PrecompiledFunctions.dll" "$(SolutionDir)SJKP.Azure.FunctionsDemos\HttpTriggerExecutionContextPrecompiled\bin"</PostBuildEvent>
+    <PostBuildEvent>xcopy /E /Y "$(TargetDir)*.*" "$(SolutionDir)SJKP.Azure.FunctionsDemos\HttpTriggerExecutionContextPrecompiled\bin"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

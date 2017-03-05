@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64E1BAB3-19B6-4897-844B-5338BB995026}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SJKP.Azure.FunctionDeploy</RootNamespace>
+    <AssemblyName>SJKP.Azure.FunctionDeploy</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="BlobTriggerCSharp\function.json" />
+    <Content Include="BlobTriggerCSharp\project.json" />
+    <Content Include="BlobTriggerCSharp\project.lock.json" />
+    <Content Include="BlobTriggerCSharp\readme.md" />
+    <Content Include="BlobTriggerCSharp\run.csx" />
+    <Content Include="BlobTriggerCSharp\sample.dat" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\readme.md" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\function.json" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\sample.dat" />
+    <Content Include="HttpTriggerExecutionContext\function.json" />
+    <Content Include="HttpTriggerExecutionContext\project.json" />
+    <Content Include="HttpTriggerExecutionContext\project.lock.json" />
+    <Content Include="HttpTriggerExecutionContext\readme.md" />
+    <Content Include="HttpTriggerExecutionContext\run.csx" />
+    <Content Include="HttpTriggerExecutionContext\sample.dat" />
+    <Content Include="appsettings.json" />
+    <Content Include="host.json" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\SJKP.PrecompiledFunctions.dll.config" />
+    <None Include="Properties\PublishProfiles\test.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\de\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\de\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\es\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\es\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\fr\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\fr\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\it\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\it\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ja\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ja\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ko\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ko\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.KeyVault.Core.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.KeyVault.Core.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.WebJobs.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.WebJobs.Extensions.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.WebJobs.Extensions.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.WebJobs.Host.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.WebJobs.Host.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Azure.WebJobs.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Data.Edm.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Data.Edm.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Data.OData.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Data.OData.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Data.Services.Client.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.Data.Services.Client.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.WindowsAzure.Storage.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.WindowsAzure.Storage.pdb" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Microsoft.WindowsAzure.Storage.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\NCrontab.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Newtonsoft.Json.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\Newtonsoft.Json.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ru\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\ru\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\SJKP.PrecompiledFunctions.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\SJKP.PrecompiledFunctions.pdb" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Net.Http.Formatting.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Net.Http.Formatting.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Spatial.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Spatial.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Threading.Tasks.Dataflow.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Web.Http.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\System.Web.Http.xml" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll" />
+    <Content Include="HttpTriggerExecutionContextPrecompiled\bin\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>26853</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:26853/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy /E /Y "$(SolutionDir)SJKP.Azure.FunctionsDemos\*.*" "$(ProjectDir)"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

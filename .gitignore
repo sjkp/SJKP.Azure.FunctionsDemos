@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/SJKP.Azure.FunctionDeploy/HttpTriggerExecutionContext
+/SJKP.Azure.FunctionDeploy/HttpTriggerExecutionContextPrecompiled
+/SJKP.Azure.FunctionDeploy/BlobTriggerCSharp

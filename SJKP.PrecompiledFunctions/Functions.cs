@@ -29,7 +29,7 @@ namespace SJKP.PrecompiledFunctions
 
             return name == null
                 ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-                : req.CreateResponse(HttpStatusCode.OK, "Hello precompiled " + name);
+                : req.CreateResponse(HttpStatusCode.OK, "Hello precompiled " + name + " " + new Common.Math().Adder(2,2));
         }
     }
 }
