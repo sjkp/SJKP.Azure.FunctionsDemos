@@ -1,6 +1,6 @@
 ﻿{
   "disabled": false,
-  "scriptFile": "SJKP.PrecompiledFunctions.dll",
+  "scriptFile": "bin/SJKP.PrecompiledFunctions.dll",
   "entryPoint": "SJKP.PrecompiledFunctions.Functions.Run",
   "bindings": [
     {
